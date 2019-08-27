@@ -12,7 +12,6 @@ import uk.ac.ebi.ddi.ddifileservice.services.IFileSystem;
 import uk.ac.ebi.ddi.ddifileservice.type.ConvertibleOutputStream;
 import uk.ac.ebi.ddi.task.lincsxmlgenerator.configuration.LincsTaskProperties;
 import uk.ac.ebi.ddi.task.lincsxmlgenerator.model.Dataset;
-import uk.ac.ebi.ddi.task.lincsxmlgenerator.model.DatasetList;
 import uk.ac.ebi.ddi.task.lincsxmlgenerator.services.LincsService;
 import uk.ac.ebi.ddi.xml.validator.parser.marshaller.OmicsDataMarshaller;
 import uk.ac.ebi.ddi.xml.validator.parser.model.Database;
@@ -42,12 +41,12 @@ public class LincsXmlGeneratorApplication implements CommandLineRunner {
     @Autowired
     private LincsTaskProperties taskProperties;
 
-	public static void main(String[] args) {
-		SpringApplication.run(LincsXmlGeneratorApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(LincsXmlGeneratorApplication.class, args);
+    }
 
-	@Override
-	public void run(String... args) throws Exception {
+    @Override
+    public void run(String... args) throws Exception {
         fileSystem.cleanDirectory(taskProperties.getOutputDir());
         AtomicInteger fileCount = new AtomicInteger(0);
         List<Entry> entries = new ArrayList<>();
@@ -64,7 +63,7 @@ public class LincsXmlGeneratorApplication implements CommandLineRunner {
             }
         }
         writeDatasetsToFile(entries, datasets.size(), fileCount.getAndIncrement());
-	}
+    }
 
     private void writeDatasetsToFile(List<Entry> entries, int total, int fileCount) throws IOException {
         if (entries.size() < 1) {

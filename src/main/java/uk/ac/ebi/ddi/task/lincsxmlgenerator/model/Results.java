@@ -20,10 +20,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Results {
 
     @JsonProperty("totalDocuments")
-    int total;
+    private int total;
 
     @JsonProperty("documents")
-    Dataset[] datasets;
+    private Dataset[] datasets;
 
     public int getTotal() {
         return total;

@@ -21,7 +21,7 @@ public class LincsService {
     /**
      * Returns the Datasets from MtabolomeWorbench
      *
-     * @return A list of entries and the facets included
+     * @return A list of entries
      */
     public List<Dataset> getAllDatasets() throws IOException {
         UriComponentsBuilder builder = UriComponentsBuilder.newInstance()
