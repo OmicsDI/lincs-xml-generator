@@ -27,7 +27,7 @@ public class Dataset implements IAPIDataset {
     private String datasetLink;
 
     @JsonProperty("projectname")
-    String projectName;
+    private String projectName;
 
     @JsonProperty("principalinvestigator")
     private String principalInvestigator;
@@ -45,7 +45,7 @@ public class Dataset implements IAPIDataset {
     private String screeninglabinvestigator;
 
     @JsonProperty("cellline")
-    String[] cellLine;
+    private String[] cellLine;
 
     @JsonProperty("tool")
     private String[] software;
@@ -54,7 +54,7 @@ public class Dataset implements IAPIDataset {
     private String omicsType;
 
     @JsonProperty("assayname")
-    String[] assayName;
+    private String[] assayName;
 
     @JsonProperty("description")
     private String description;
